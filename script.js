@@ -1,6 +1,11 @@
 const byteSize = (str) => {
-  // write your code here
-	return str.length;
+  const encoder = new TextEncoder();
+  
+  // Encode the string and get the resulting Uint8Array
+  const encoded = encoder.encode(str);
+  
+  // The byte size is the length of the Uint8Array
+  return encoded.length;
 };
 
 // Do not change the code below
